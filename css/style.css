@@ -1,100 +1,182 @@
-* {
-margin: 0;
-padding: 0;
-box-sizing:border-box;
+:root {
+    --color-negro: #121212;
+    --color-blanco: #f5f5f5;
+    --color-verde: #4C7355;
+    --color-azul: #2B3A67;
 }
 
+body {
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+}
 
-/*===Video de Fondo===*/
+/*Video de fondo*/
 .video-bg {
-position: fixed;
-top: 0;
-left: 0;
-min-width: 100%;
-z-index: -1;
-object-fit: cover;
-display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
 }
 
-/* Logo y Fuentes*/
+/*header transparente*/
+.hero-header{
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    z-index: 2;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .col-md-8, .col-md-4 {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .ratio {
+        height: auto !important;
+    }
+}
+
+/* Logo */
 .logo {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    font-family: 'Montserrat',sans-serif;
     font-weight: 800;
+}
+
+/* Nav */
+.nav-link {
+    font-weight: 600;
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Header */
-.her-header {
-    background: rgba (0,0,0,0.5); /*transparente*/
-    backdrop-filter: blur(5px);
-    position: relative;
-    z-index: 2;
-}
-
-/* Buscador */
-form input[type="search"] {
-    max-width: 400px;
-} 
-
-/*Loader*/
+/* -------------Loader AÚN NO ESTÁ LISTO-----------*/
 #loader {
     position: fixed;
-    background-color: #000;
     width: 100%;
     height: 100%;
+    background-color: #000;
     z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Galería*/
+.img-fluid {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+/* Videos */
+video {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+}
+
+.parrafoGaleriaVideos {
+    
+}
+/* Responsive ajustes */
+
+@media (max-width: 576px) {
+    .logo {
+        font-size: 1.8rem;
+    }
+    .hero-header nav ul {
+        text-align: center;
+        padding-top: 10px;
+    }
+    h2, h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Estilo top app movil */
+
+.mobile-nav {
+    position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba (18,18,18,0.95);
+    z-index: 1000;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
 }
 
-/* Colores Base */
-
-:root {
-    --color-azul-urbano: #2B3A67;
-    --color-verde-ruta: #4C7355;
-    --color-negro-humo: #121212;
-    --color-blanco-niebla: #F5F5F5;
-    --color-gris-viento: #999999;
-}   
-
-body {
-    background-color: var(--color-negro-humo);
-    color: var(--color-blanco-niebla);
-    font-family: 'lato', sans-serif;
+.menu-toggle {
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--color-blanco);
+    z-index: 1100;
 }
 
-h1,h2,nav,a{
-    font-family: 'monstserrat', sans-serif;
+.menu-links {
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: var(--color-azul);
+    list-style: none;
+    display:flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.5);
 }
 
-a, .btn-primary {
-    background-color: var(--color-verde-ruta);
-    color: var(--color-blanco-niebla);
+.menu-links.open {
+    right:0;
 }
 
-a:hover, .btn-primary:hover {
-    background-color: #3C5F44;
+.menu-links li {
+    margin-bottom: 1.5rem;
 }
 
-.card {
-    background-color: #1C1C1C;
-    border-color: var(--color-gris-viento);
+.menu-links a {
+    color:white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 
-nav {
-    background-color: var(--color-azul-urbano);
+.menu-links a:hover {
+    color: var(--color-verde);
 }
 
-a, .btn-primary {
-    background-color: var(--color-verde-ruta);
-    color: var(--color-blanco-niebla);
+/* Botón flotante */
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--color-verde);
+    color:white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    padding:1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-a:hover, .btn-primary:hover {
-    background-color: #3C5F44;
+.floating-btn:hover {
+    background-color: #3d5f48;
 }
 
-.card {
-    background-color: #1C1C1C;
-    border-color: var(--color-gris-viento);
+/* Ocultar en pantallas grandes */
+@media (min-width: 768px) {
+    .mobile-nav {
+        display: none;
+    }
 }
+
