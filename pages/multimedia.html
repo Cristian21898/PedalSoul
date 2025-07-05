@@ -1,43 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Multiedia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Galería Multimedia - PedalSoul</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- GLightbox (Imágenes + Videos) -->
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Tu CSS -->
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <a href="../index.html">Inicio</a>
-                <a href="categorias_de_ciclismo.html">Categorías de Ciclismo</a>
-                <a href="comunidad.html">Comunidad</a></li>
-                <a href="recursos.html">Recursos</a></li>
-                <a href="#">Multiedia</a></li>
-            </ul>
-        </nav>    
-    </header>
+<header class="text-white text-center py-4 bg-dark">
+<!--Navegación-->
+    <nav>
+        <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link text-white" href="../index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="comunidad.html">Comunidad</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Multimedia</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="categorias_de_ciclismo.html">Categorías de Ciclismo</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="recursos.html">Recursos</a></li>
+        </ul>
+    </nav>
+    <h1 class="logo">Galería de la Comunidad</h1>
+  <p class="lead">Fotos y videos compartidos por ciclistas como tú</p>
+</header>
 
-<!--                   VIDEO PRINCIPAL             -->
+<main class="container my-5">
 
-<section class="container text-center text-white my-5 px-3">
-    <h3 class="mb-4">Video Destacado</h3>
-    <div class="ratio ratio-16x9 mx-auto" style="max-width: 100%;">
-        <video controls poster="images/vide_thumbnail.jpg">
-            <source src="videos/FixedAmanecer.mp4" type="video/mp4">
-        </video>
+  <!-- 🌄 GALERÍA DE FOTOS -->
+  <section class="mb-5">
+    <h2 class="text-center mb-4">Galería Fotográfica</h2>
+    <div class="row g-4">
+      <!-- Imagen 1 -->
+      <div class="col-md-4">
+        <a href="../images/fixed_1.jpg" class="glightbox" data-gallery="fotos" data-title="Simplicidad urbana en dos ruedas<br><a href='multimedia.html' class='btn btn-light btn-sm mt-2'>Ir a galería completa</a>">
+          <img src="../images/fixed_1.jpg" class="img-fluid rounded shadow-sm" alt="Fixed_1">
+        </a>
+      </div>
+      <!-- Imagen 2 -->
+      <div class="col-md-4">
+        <a href="../images/mtbSunsetMatsnsVertic.jpg" class="glightbox" data-gallery="fotos" data-title="Atardecer en montaña con MTB<br><a href='multimedia.html' class='btn btn-light btn-sm mt-2'>Ir a galería completa</a>">
+          <img src="../images/mtbSunsetMatsnsVertic.jpg" class="img-fluid rounded shadow-sm" alt="MTB">
+        </a>
+      </div>
+      <!-- Imagen 3 -->
+      <div class="col-md-4">
+        <a href="../images/BikeBlue.jpg" class="glightbox" data-gallery="fotos" data-title="Estética azul sobre ruedas<br><a href='multimedia.html' class='btn btn-light btn-sm mt-2'>Ir a galería completa</a>">
+          <img src="../images/BikeBlue.jpg" class="img-fluid rounded shadow-sm" alt="Bike Blue">
+        </a>
+      </div>
     </div>
-</section>
+  </section>
 
-    <main>
-        <h1>Multiedia</h1>
-    </main>
+  <!-- 🎥 VIDEOS DE LA COMUNIDAD -->
+  <section class="bg-dark bg-opacity-75 text-white p-4 rounded">
+    <h2 class="text-center mb-4">Videoclips de la comunidad</h2>
+    <div class="row g-4">
 
+      <!-- Video 1 -->
+      <div class="col-12 col-md-3">
+        <a href="../videos/FixedAmanecerVertical.mp4" class="glightbox" data-gallery="videos" data-type="video" data-title="La vida hay que llevarla como bicicleta de pista... Sin frenos pero con casco.">
+          <img src="../images/VideoImageFixedAmanecerVertical.jpg" class="img-fluid rounded shadow-sm" alt="Video 1">
+        </a>
+      </div>
 
-    <footer>
-    </footer>
+      <!-- Video 2 -->
+      <div class="col-12 col-md-6">
+        <a href="../videos/MTBSubidaHorizontal.mp4" class="glightbox" data-gallery="videos" data-type="video" data-title="¿Te gustaría ver tu video en esta galería?">
+          <img src="../images/VideoImageMtbSubidaHorizontal.jpg" class="img-fluid rounded shadow-sm" alt="Video 2">
+        </a>
+
+        <!-- Descripción adicional -->
+        <div class="bg-secondary bg-opacity-50 p-3 rounded mt-3">
+          <p>
+            Puedes enviar tu video y, si cumple con los criterios de calidad y contenido de nuestro equipo de revisión, lo publicaremos en esta sección.
+            <br><br>
+            Anímate a participar y comparte tu forma de ver el mundo sobre ruedas.
+          </p>
+        </div>
+      </div>
+
+      <!-- Video 3 -->
+      <div class="col-12 col-md-3">
+        <a href="../videos/mtbSunsetVertical.mp4" class="glightbox" data-gallery="videos" data-type="video" data-title="Descripción del video.">
+          <img src="../images/videoimageMtbSunsetVertical.jpg" class="img-fluid rounded shadow-sm" alt="Video 3">
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="text-center text-white py-4 border-top border-secondary bg-dark mt-5">
+  © 2025 PedalSoul - Todos los derechos reservados.
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+<script>
+  const lightbox = GLightbox({ selector: '.glightbox' });
+</script>
 
 </body>
 </html>

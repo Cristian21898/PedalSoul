@@ -120,6 +120,13 @@ video {
     display: block;
 }
 
+.center-vertical {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    height: 100% !important;
+} 
+
 
 /* Responsive ajustes */
 
@@ -136,19 +143,6 @@ video {
     }
 }
 
-/* Estilo top app movil */
-
-.mobile-nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    background-color: rgba (18,18,18,0.95);
-    z-index: 1000;
-    padding: 1rem;
-    display: flex;
-    justify-content: flex-end;
-}
 
 .menu-toggle {
     font-size: 2rem;
