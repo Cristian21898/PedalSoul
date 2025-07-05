@@ -73,6 +73,46 @@ body {
     height: auto;
 }
 
+.info-box {
+    position: relative;
+    min-height: 300px;
+}
+
+.info-default,
+.info-img {
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+    display: none;
+    z-index: 10;
+}
+
+.info-default {
+    display: flex;
+}
+
+.hover-img:hover {
+    opacity:0.95;
+}
+
+/* Mostrar el texto correspondiente al hacer hover */
+.hover-img[data-hover="1"]:hover ~ .info-box .info-img [data-img="1"],
+.hover-img[data-hover="2"]:hover ~ .info-box .info-img [data-img="2"],
+.hover-img[data-hover="3"]:hover ~ .info-box .info-img [data-img="3"],
+.hover-img[data-hover="4"]:hover ~ .info-box .info-img [data-img="4"] {
+    display: block;
+}
+
+/* Ocultar texto por defecto cuando hay hover */
+.hover-img[data-hover]:hover ~ .info-box .info-default {
+    display: none;
+}
+
+
+
 /* Videos */
 video {
     width: 100% !important;
@@ -80,9 +120,7 @@ video {
     display: block;
 }
 
-.parrafoGaleriaVideos {
-    
-}
+
 /* Responsive ajustes */
 
 @media (max-width: 576px) {
